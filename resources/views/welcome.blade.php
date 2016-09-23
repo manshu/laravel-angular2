@@ -9,10 +9,10 @@
 
     <!-- 1. Load libraries -->
     <!-- Polyfill(s) for older browsers -->
-    {{ Html::script('core-js/client/shim.min.js') }}
-    {{ Html::script('zone.js/dist/zone.js') }}
-    {{ Html::script('reflect-metadata/Reflect.js') }}
-    {{ Html::script('systemjs/dist/system.src.js') }}
+    {{ Html::script('js/core-js/client/shim.min.js') }}
+    {{ Html::script('js/zone.js/dist/zone.js') }}
+    {{ Html::script('js/reflect-metadata/Reflect.js') }}
+    {{ Html::script('js/systemjs/dist/system.src.js') }}
     {{ Html::script('systemjs.config.js') }}
 
     <script>

@@ -193,17 +193,17 @@ elixir(mix => {
             // our app is within the app folder
             app: 'app',
             // angular bundles
-            '@angular/core': '@angular/core/bundles/core.umd.js',
-            '@angular/common': '@angular/common/bundles/common.umd.js',
-            '@angular/compiler': '@angular/compiler/bundles/compiler.umd.js',
-            '@angular/platform-browser': '@angular/platform-browser/bundles/platform-browser.umd.js',
-            '@angular/platform-browser-dynamic': '@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-            '@angular/http': '@angular/http/bundles/http.umd.js',
-            '@angular/router': '@angular/router/bundles/router.umd.js',
-            '@angular/forms': '@angular/forms/bundles/forms.umd.js',
+            '@angular/core': 'js/@angular/core/bundles/core.umd.js',
+            '@angular/common': 'js/@angular/common/bundles/common.umd.js',
+            '@angular/compiler': 'js/@angular/compiler/bundles/compiler.umd.js',
+            '@angular/platform-browser': 'js/@angular/platform-browser/bundles/platform-browser.umd.js',
+            '@angular/platform-browser-dynamic': 'js/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+            '@angular/http': 'js/@angular/http/bundles/http.umd.js',
+            '@angular/router': 'js/@angular/router/bundles/router.umd.js',
+            '@angular/forms': 'js/@angular/forms/bundles/forms.umd.js',
             // other libraries
-            'rxjs':                       'rxjs',
-            'angular2-in-memory-web-api': 'angular2-in-memory-web-api',
+            'rxjs':                       'js/rxjs',
+            'angular2-in-memory-web-api': 'js/angular2-in-memory-web-api',
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -221,35 +221,36 @@ elixir(mix => {
         }
     });
 })(this);
+
 ```
 
 10 After that in your welcome.blade.php paste this code
 ```
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel 5.3 - Angular 2</title>
+    <title>Laravel 5.3 - Angular 2</title>
 
-        <!-- 1. Load libraries -->
-        <!-- Polyfill(s) for older browsers -->
-        {{ Html::script('core-js/client/shim.min.js') }}
-        {{ Html::script('zone.js/dist/zone.js') }}
-        {{ Html::script('reflect-metadata/Reflect.js') }}
-        {{ Html::script('systemjs/dist/system.src.js') }}
-        {{ Html::script('systemjs.config.js') }}
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    {{ Html::script('js/core-js/client/shim.min.js') }}
+    {{ Html::script('js/zone.js/dist/zone.js') }}
+    {{ Html::script('js/reflect-metadata/Reflect.js') }}
+    {{ Html::script('js/systemjs/dist/system.src.js') }}
+    {{ Html::script('systemjs.config.js') }}
 
-        <script>
-            System.import('app').catch(function(err){ console.error(err); });
-        </script>
-    </head>
-    <!-- 3. Display the application -->
-    <body>
-    <my-app>Loading...</my-app>
-    </body>
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+</head>
+<!-- 3. Display the application -->
+<body>
+<my-app>Loading...</my-app>
+</body>
 </html>
 ```
 

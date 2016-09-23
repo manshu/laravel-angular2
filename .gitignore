@@ -5,9 +5,4 @@
 Homestead.json
 Homestead.yaml
 .env
-public/@angular
-public/app
-public/core-js
-public/reflect-metadata
-public/rxjs
-public/systemjs
+/public/js/*
