@@ -1,4 +1,5 @@
 #This is Boilerplate for Angular 2 with Laravel 5.3
+** Do not use the following information if you are going to clone the prject. ** 
 1. First with new laravel 5.3 setup, there is a package.json file. Paste this code in this file.
 ```
 {
